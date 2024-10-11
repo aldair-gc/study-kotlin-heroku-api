@@ -1,15 +1,13 @@
-package one.digitalinnovation.avengers.resource.avenger
+package com.aldairgc.avengers.resource.avenger
 
-import one.digitalinnovation.avengers.domain.avenger.Avenger
-import one.digitalinnovation.avengers.domain.avenger.AvengerRepository
+import com.aldairgc.avengers.domain.avenger.Avenger
+import com.aldairgc.avengers.domain.avenger.AvengerRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Component
 
 @Component
-class AvengerRepositoryImpl(
-    @Autowired private val repository: AvengerEntityRepository
-) : AvengerRepository {
+class AvengerRepositoryImpl( @Autowired private val repository: AvengerEntityRepository ) : AvengerRepository {
     override fun getDetail(id: Long): Avenger? =
         repository.findByIdOrNull(id)?.toAvenger()
 

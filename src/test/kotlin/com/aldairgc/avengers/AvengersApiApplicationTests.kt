@@ -1,4 +1,4 @@
-package one.digitalinnovation.avengers
+package com.aldairgc.avengers
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

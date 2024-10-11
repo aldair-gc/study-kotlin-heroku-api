@@ -1,4 +1,4 @@
-package one.digitalinnovation.avengers.resource.avenger
+package com.aldairgc.avengers.resource.avenger
 
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
