@@ -19,13 +19,12 @@ data class AvengerEntity(
     fun toAvenger() = Avenger(id, nick, person, description, history)
 
     companion object {
-        fun from(avenger: Avenger) =
-            AvengerEntity(
-                id = avenger.id,
-                nick = avenger.nick,
-                description = avenger.description,
-                history = avenger.history,
-                person = avenger.person
-            )
+        fun from(avenger: Avenger) = AvengerEntity(
+            id = avenger.id,
+            nick = avenger.nick,
+            description = avenger.description,
+            history = avenger.history,
+            person = avenger.person
+        )
     }
 }

@@ -7,7 +7,9 @@ import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Component
 
 @Component
-class AvengerRepositoryImpl( @Autowired private val repository: AvengerEntityRepository ) : AvengerRepository {
+class AvengerRepositoryImpl(
+    @Autowired private val repository: AvengerEntityRepository
+) : AvengerRepository {
     override fun getDetail(id: Long): Avenger? =
         repository.findByIdOrNull(id)?.toAvenger()
 

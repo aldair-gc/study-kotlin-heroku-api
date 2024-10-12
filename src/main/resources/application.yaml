@@ -2,12 +2,6 @@ spring:
   application:
     name: avengers
   config:
-    # This configuration allow use profiles as spring 2.3.x version
-    # In spring 2.4.x version, has changed to:
-    # spring:
-    #  profiles:
-    #    group:
-    #      <group>: dev, auth
     use-legacy-processing: true
   profiles:
     active: dev
@@ -30,7 +24,7 @@ spring:
     hibernate:
       ddl-auto: none
       naming:
-        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
   main:
     allow-bean-definition-overriding: true
