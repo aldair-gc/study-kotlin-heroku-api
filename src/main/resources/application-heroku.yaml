@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    active: heroku
   jackson:
     serialization:
       indent-output: true
@@ -10,5 +8,4 @@ spring:
     username: ${DB_USER}
     password: ${DB_PASSWORD}
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: false
